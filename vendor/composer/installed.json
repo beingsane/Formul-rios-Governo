@@ -1,0 +1,34 @@
+[
+    {
+        "name": "codegun/phpmailer-lite",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codegun/phpmailer-lite",
+            "reference": "1.0.0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/codegun/phpmailer-lite/zipball/1.0.0",
+            "reference": "1.0.0",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.0.0"
+        },
+        "time": "2012-07-31 05:03:06",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/class.phpmailer-lite.php"
+            ]
+        },
+        "notification-url": "http://packagist.org/downloads/",
+        "description": "PHPMailerLite By PHPMailer",
+        "keywords": [
+            "phpmailer"
+        ]
+    }
+]

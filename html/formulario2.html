@@ -1,0 +1,117 @@
+<?php
+if($_POST){
+	$opcao1 = ($_POST['OPCAO'] == '1') ? 'checked' : '';
+	$opcao2 = ($_POST['OPCAO'] == '2') ? 'checked' : '';
+	$opcao3 = ($_POST['OPCAO'] == '3') ? 'checked' : '';
+	$opcao4 = ($_POST['OPCAO'] == '4') ? 'checked' : '';
+	$opcao5 = ($_POST['OPCAO'] == '5') ? 'checked' : '';
+	$opcao6 = ($_POST['OPCAO'] == '6') ? 'checked' : '';
+	$opcao7 = ($_POST['OPCAO'] == '7') ? 'checked' : '';
+	$opcao8 = ($_POST['OPCAO'] == '8') ? 'checked' : '';
+	$opcao9 = ($_POST['OPCAO'] == '9') ? 'checked' : '';
+	$opcao10 = ($_POST['OPCAO'] == '10') ? 'checked' : '';
+	$opcao11 = ($_POST['OPCAO'] == '11') ? 'checked' : '';
+
+} else {
+	$opcao1 = '';
+	$opcao2 = '';
+	$opcao3 = '';
+	$opcao4 = '';
+	$opcao5 = '';
+	$opcao6 = '';
+	$opcao7 = '';
+	$opcao8 = '';
+	$opcao9 = '';
+	$opcao10 = '';
+	$opcao11 = '';
+}
+?>
+            <fieldset class="mgtop2 left">
+
+                <legend  class="upper font15">DESEJO ME INSCREVER PARA O CARGO DE</legend>
+
+
+                <dl>
+                    <dt class="title">CARGO 4: DOCENTE PARA EDUCA&Ccedil;&Atilde;O PROFISSIONAL</dt>
+                    <dd>
+                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="1" <?php echo $opcao1; ?>>
+                        1.1 Curso Livre: Qualifica&ccedil;&atilde;o em Agente de Combate &aacute;s Endemias
+                    </dd>
+
+                    <dd>
+                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="2" <?php echo $opcao2; ?>>
+                        1.2 Curso T&eacute;cnico em Pr&oacute;tese Dent&aacute;ria
+                    </dd>
+
+                    <dd>
+                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="3" <?php echo $opcao3; ?>>
+                        1.3 Curso de Preven&ccedil;&atilde;o da Morte Materna e Neonatal
+                    </dd>
+
+                    <dd>
+                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="4" <?php echo $opcao4; ?>>
+                        1.4 Curso T&eacute;cnico em Enfermagem
+                    </dd>
+
+                    <dd>
+                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="5" <?php echo $opcao5; ?>>
+                        1.5 Curso de Especializa&ccedil;&atilde;o Profissional de N&iacute;vel
+                        T&eacute;cnico em Enfermagem em Urg&ecirc;ncia e Emerg&ecirc;ncia
+                    </dd>
+
+                    <dd>
+                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="6" <?php echo $opcao6; ?>>
+                        1.6 Curso T&eacute;cnico em Sa&uacute;de Bucal
+                    </dd>
+                </dl>
+
+
+                <dl>
+                <dt class="title">CARGO 5: RESPONS&Aacute;VEL T&Eacute;CNICO PARA EDUCA&Ccedil;&Atilde;O PROFISSIONAL</dt>
+
+                    <dd><INPUT TYPE="radio" NAME="OPCAO" VALUE="7" <?php echo $opcao7; ?>>
+                        1.1 Curso Livre: Qualifica&ccedil;&atilde;o em Agente de Combate &aacute;s Endemias
+                    </dd>
+
+                    <dd>
+                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="8" <?php echo $opcao8; ?>>
+                        1.2 Curso T&eacute;cnico em Pr&oacute;tese Dent&aacute;ria
+                    </dd>
+
+                    <dd>
+                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="9" <?php echo $opcao9; ?>>
+                        1.3 Curso de Preven&ccedil;&atilde;o da Morte Materna e Neonatal
+                    </dd>
+
+                    <dd>
+                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="10" <?php echo $opcao10; ?>>
+                        1.4 Curso T&eacute;cnico em Enfermagem
+                    </dd>
+
+                    <dd>
+                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="11" <?php echo $opcao11; ?>>
+                        1.5 Curso de Especializa&ccedil;&atilde;o Profissional de
+                        N&iacute;vel T&eacute;cnico em Enfermagem em Urg&ecirc;ncia e Emerg&ecirc;ncia
+                    </dd>
+
+
+                </dl>
+
+
+
+            </fieldset>
+            <p class="obs">Obs.: O candidato poder&aacute; se inscrever em apenas um cargo e em uma &aacute;rea
+                espec&iacute;fica de atua&ccedil;&atilde;o correspondente.</p>
+
+            <p class="acordo">
+                <input type="checkbox" name="concordo" id="contrato" class="acordo_aceitar left" >
+                <label>
+                    Declaro ter pleno conhecimento dos requisitos inseridos no edital n&#176; 02/013 de
+                    sele&ccedil;&atilde;o simplificada de docentes, docentes autores e respons&aacute;veis t&eacute;cnicos
+                </label>
+            </p>
+
+            <p>
+                <input type="hidden" name="tipo" value="form2">
+                <input type="Submit" value="Enviar" id="enviarFormulario" class="enviar">
+

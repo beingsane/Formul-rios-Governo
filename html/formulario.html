@@ -1,0 +1,70 @@
+
+<fieldset class="mgtop2 left">
+
+<?php
+if($_POST and is_array($_POST['opcao'])){
+	$opcao1 = in_array('1', $_POST['opcao']) ? 'checked' : '';
+	$opcao2 = in_array('2', $_POST['opcao']) ? 'checked' : '';
+	$opcao3 = in_array('3', $_POST['opcao']) ? 'checked' : '';
+	$opcao4 = in_array('4', $_POST['opcao']) ? 'checked' : '';
+	$opcao5 = in_array('5', $_POST['opcao']) ? 'checked' : '';
+} else {
+	$opcao1 = '';
+	$opcao2 = '';
+	$opcao3 = '';
+	$opcao4 = '';
+	$opcao5 = '';
+}
+
+?>
+
+    <legend  class="upper font15">DESEJO ME INSCREVER PARA O CARGO DE: </legend>
+
+<dl>
+    <dt class="title">CARGO 6: DOCENTE AUTOR PARA EDITORA</dt>
+
+            <dd>
+                <INPUT TYPE="checkbox" NAME="opcao[]" VALUE="1" onclick="verificar();" <?php echo $opcao1; ?>>
+                1.1 Curso Livre: Qualifica&ccedil;&atilde;o em
+                Agente de Combate &aacute;s Endemias
+            </dd>
+
+            <dd>
+                <INPUT TYPE="checkbox" NAME="opcao[]" VALUE="2" onclick="verificar();"  <?php echo $opcao2; ?>>
+                1.2 Curso T&eacute;cnico em Pr&oacute;tese Dent&aacute;ria
+            </dd>
+
+            <dd>
+                <INPUT TYPE="checkbox" NAME="opcao[]" VALUE="3" onclick="verificar();"  <?php echo $opcao3; ?>>
+                1.3 Curso T&eacute;cnico em Enfermagem
+            </dd>
+
+            <dd>
+                <INPUT TYPE="checkbox" NAME="opcao[]" VALUE="4" onclick="verificar();"  <?php echo $opcao4; ?>>
+                 1.4 Curso de Especializa&ccedil;&atilde;o Profissional de N&iacute;vel
+                T&eacute;cnico em Enfermagem em Urg&ecirc;ncia e Emerg&ecirc;ncia
+            </dd>
+
+            <dd>
+                <INPUT TYPE="checkbox" NAME="opcao[]" VALUE="5" onclick="verificar();"  <?php echo $opcao5; ?>>
+                1.5 Curso T&eacute;cnico em Vigil&acirc;ncia em Sa&uacute;de
+            </dd>
+        </dl>
+</dl>
+</fieldset>
+
+<p class="obs">Obs.: O candidato que desejar se inscrever para o cargo de docente autor poder&aacute; fazer a
+inscri&ccedil;&atilde;o em at&eacute; 2(dois) cursos desde que atenda aos requisitos m&iacute;nimos descritos
+no quadro III do Edital.</p>
+
+<p class="acordo">
+    <input type="checkbox" name="concordo" id="contrato" class="acordo_aceitar left" >
+    <label>
+        Declaro ter pleno conhecimento dos requisitos inseridos no edital n&#176; 02/013 de
+        sele&ccedil;&atilde;o simplificada de docentes, docentes autores e respons&aacute;veis t&eacute;cnicos
+    </label>
+</p>
+
+<p>
+    <input type="hidden" name="tipo" value="form1">
+    <input type="Submit" value="Enviar" id="enviarFormulario" class="enviar">

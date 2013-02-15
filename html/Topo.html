@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="mask.js"></script>
+    <style type="text/css">
+        body{
+            background: #EEEEEE;
+            font-family: 'Calibri';
+            font-size: 12px;
+        }
+        #margem{
+            width: 700px;
+            margin: 0 auto;
+        }
+        .logotipo{
+            float:left;
+            margin-right: 10px;
+        }
+        .ficha{
+            font-size: 18px;
+            margin-bottom: 0;
+            margin-top: 20px;
+        }
+        .sub,
+        .sub2{
+            font-size: 15px;
+            margin-top: 0;
+            padding-bottom: 10px;
+        }
+        .sub{
+            border-bottom: 1px solid #CCCCCC;
+            width: 400px;
+        }
+        .Textos{
+            float: left;
+            width: 590px
+        }
+        #topo{
+            clear: both;
+            margin-bottom: 20px;
+            float: left;
+        }
+        #errorMessage{
+            background:#FFFFFF;
+            float: left;
+            width: 90%;
+            border: 1px solid #000000;
+            border-radius: 5px 5px;
+            padding: 20px;
+            font-family: 'Calibri';
+            color: #FF0000;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        input[type="text"]{
+            border: 1px solid #CCCCCC;
+            height: 38px;
+            background: #FFFFFF;
+            border-radius: 5px 5px;
+            padding: 2px 13px;
+            font-family: 'Calibri';
+            font-size: 20px;
+        }
+        .title{
+            font-size: 15px;
+            color: #000000;
+        }
+        .upper{
+            text-transform: uppercase;
+        }
+        #enviarFormulario{
+            background: #333;
+            border: medium none;
+            padding: 10px 51px;
+            border-radius: 3px 3px;
+            color: white;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-family: 'Calibri';
+            float: right;
+            margin-right: 41%;
+            cursor: pointer;
+        }
+        .acordo{
+            font-size: 13px;
+        }
+		.cpm3{
+			position: relative;
+			left: 17px;
+		}
+		.cpm2{
+			position: relative;
+			left: 9px;
+		}
+        dd{font-size: 13px;color: #000000; padding: 6px 0px;}
+        .obs{font-size: 12px; font-family: 'Calibri'; font-weight: 700;float: left; text-transform: uppercase;width:100%}
+        .nome{ width: 97%;  font-weight: 700; }
+        fieldset{border-radius: 5px 5px; border: 1px solid #CCCCCC;padding: 11px 32px;}
+        fieldset legend{padding: 5px 10px}
+
+        /* swp framework */
+        .left{float:left;}
+        .right{float:right;}
+        .font12{font-size: 12px;}
+        .font15{font-size: 15px;}
+        .mgtop{margin-top: 10px;}
+        .mgtop2{margin-top: 20px;}
+        .mgbot{margin-bottom: 10px;}
+        .mgbot2{margin-bottom: 20px;}
+        .grid-3{width: 33%;}
+        .grid-3 input{width: 87%;}
+        .grid-6{width: 66%;}
+        .grid-6 input{width: 96%;}
+        .grid-9{width: 100%;}
+        .grid-9 input{width: 97%;}
+    </style>
+
+    <script type="text/javascript">
+	$(document).ready(function(){
+		$("#cpf").mask("999.999.999-99");
+		$("#telefone").mask("99 9999-9999");
+	});
+
+
+        var CheckMaximo = 2;
+
+        function verificar() {
+            var Marcados = 1;
+            var objCheck = document.forms['form1'].elements['opcao[]'];
+
+            for (var iLoop=0; iLoop<objCheck.length; iLoop++) {
+
+                if (objCheck[iLoop].checked) {
+                    Marcados++;
+                }
+
+                if (Marcados <= CheckMaximo) {
+
+                    for (var i=0; i<objCheck.length; i++) {
+                        objCheck[i].disabled = false;
+                    }
+
+                } else {
+                    for (var i=0; i<objCheck.length; i++) {
+                        if(objCheck[i].checked == false) {
+                            objCheck[i].disabled = true;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+<div id="margem">
+    <div id="topo">
+
+        <a href="" class="logotipo">
+            <img src="images/logotipo.png" alt="" title="" />
+        </a>
+
+        <div class="Textos">
+            <h2 class="ficha">FICHA DE INSCRI&Ccedil;&Atilde;O</h2>
+
+            <p class="sub">COORDENA&Ccedil;&Atilde;O DA ESCOLA T&Eacute;CNICA DO SUS/ETSUS<br />
+                EDUCA&Ccedil;&Atilde;O PROFISSIONAL</p>
+
+            <p class="sub2">EDITAL N&#176; 02/2013 DE SELE&Ccedil;&Atilde;O SIMPLIFICADA DE DOCENTES,<br />
+                DOCENTES AUTORES E RESPONS&Aacute;VEIS T&Eacute;CNICOS</p>
+
+        </div>
+
+    </div>
+
+    <?php
+            if (isset($msg)){
+     ?>
+        <div id="errorMessage" class="mgbot2">
+            <?php echo nl2br($msg); ?>
+        </div>
+    <?php
+            }
+        ?>
+
+
+
+
+
+    <form name="form1" action="/form/Requisicao" method="post" enctype="multipart/form-data">
+        <p class="upper">Nome do Candidato<br/>
+            <input class="nome upper" type="Text" name="Nome" value="<?php echo isset($dados['nome']) ? $dados['nome'] : ' '; ?>" size="50">
+        </p>
+        <p class="upper left grid-3">Identidade<br />
+            <input type="Text" name="Identidade" value="<?php echo isset($dados['identidade']) ? $dados['identidade'] : ' '; ?>" size="20">
+        </p>
+
+        <p class="upper left grid-3 cpm2">
+            &Oacute;rg&Atilde;O Expedidor<br />
+            <input type="Text" name="Org_expedidor" value="<?php echo isset($dados['org_expedidor']) ? $dados['org_expedidor'] : ' '; ?>" size="20">
+        </p>
+
+        <p class="upper left grid-3 cpm3">
+            CPF<br />
+            <input type="Text" id="cpf" name="CPF" value="<?php echo isset($dados['cpf']) ? $dados['cpf'] : ' '; ?>" size="20">
+        </p>
+
+        <p class="left upper grid-6">E-mail<br />
+            <input type="Text" name="E-mail" value="<?php echo isset($dados['e-mail']) ? $dados['e-mail'] : ' '; ?>" size="20"></p>
+
+        <p class="upper left grid-3 cpm3">Telefone<br />
+            <input id="telefone" type="Text" name="Telefone" value="<?php echo isset($dados['telefone']) ? $dados['telefone'] : ' '; ?>" size="20">
+        </p>
+
+        <p class="upper left grid-9">Endere&ccedil;o<br />
+            <input type="Text" name="Endereco" value="<?php echo isset($dados['endereco']) ? $dados['endereco'] : ' '; ?>" size="50">
+        </p>
+
+
+        <p class="upper left grid-9">Enviar Curriculum<br />
+            <input type="file" name="curriculum">
+        </p>

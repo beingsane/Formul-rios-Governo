@@ -1,0 +1,13 @@
+{
+    "name": "Nathan/form",
+    "require": {
+        "codegun/phpmailer-lite": "1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Jefersson Nathan",
+            "email": "nathan@swapidesenvolvimento.com.br"
+        }
+    ],
+    "minimum-stability": "stable"
+}
