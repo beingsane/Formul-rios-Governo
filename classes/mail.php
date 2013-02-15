@@ -33,7 +33,13 @@ class MAIL
             '8' => '1.2 Curso Técnico em Prótese Dentária',
             '9' => '1.3 Curso de Prevenção da Morte Materna e Neonatal',
             '10' => '1.4 Curso Técnico em Enfermagem',
-            '11' => '1.5 Curso de Especialização Profissional de Nível Técnico em Enfermagem em Urgência e Emergência'
+            '11' => '1.5 Curso de Especialização Profissional de Nível Técnico em Enfermagem em Urgência e Emergência',
+            '12' => '1.1 Atenção Primári',
+            '13' => '1.2 Urgência e Emergência',
+            '14' => '1.3 Atenção Psicossocial',
+            '15' => '1.4 Gestão em Saúde Pública',
+            '16' => '1.5 Sistemas de Informação em Saúde',
+            '17' => '1.6 Obstetrícia (pré-natal e parto)'
         );
 
 
