@@ -56,12 +56,15 @@ class Requisicao
             unset($msg);
 
 
-        require "html/Topo.html";
+    	if ($dados['tipo'] == 'form1' ) {
+    		require "html/Topo.html";
+			require "html/formulario.html";
+    	} else {
+       		require "html/Topo2.html";
+    		require "html/formulario2.html";
 
-        if ($dados['tipo'] == 'form1' )
-            require "html/formulario.html";
-        else
-            require "html/formulario2.html";
+    	}
+
 
         require "html/Rodape.html";
 
