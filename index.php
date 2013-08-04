@@ -30,5 +30,3 @@ $acao = isset($_GET['c']) ? $_GET['c'] : FALSE;
 
     $verifica = new Verificacao();
     $verifica->verifica($acao);
-
-
