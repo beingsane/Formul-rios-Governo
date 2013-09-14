@@ -28,5 +28,5 @@ spl_autoload_register("carregarClasses");
 $acao = isset($_GET['c']) ? $_GET['c'] : FALSE;
 
 
-    $verifica = new Verificacao();
-    $verifica->verifica($acao);
+$verifica = new Verificacao();
+$verifica->verifica($acao);
