@@ -15,7 +15,7 @@ class DB
     {
         if(self::$estado == 0){
             try{
-                self::$conexao =  new PDO('mysql:host=127.0.0.1;dbname=sis_ses','swapi','1p4w5:D-!');
+                self::$conexao =  new PDO('mysql:host=;dbname=','','');
                 self::$estado = 1;
                 return self::$conexao;
             }catch (PDOException $e){
