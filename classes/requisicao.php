@@ -4,7 +4,7 @@
  * @author Jefersson Nathan
  * @date 14/02/13
  * @time 07:39
- * @package Formulário Governo
+ * @package Formulï¿½rio Governo
  */
 class Requisicao
 {
@@ -13,7 +13,10 @@ class Requisicao
         if(count($_POST) <= 0)
             header('Location: /form');
 
-        if(isset($_POST['tipo']) and ($_POST['tipo'] == 'form1' || $_POST['tipo'] == 'form2') ){
+        if (isset($_POST['tipo']) 
+        	  and ($_POST['tipo'] == 'form1' 
+        	   || $_POST['tipo'] == 'form2') 
+        ) {
             $this->formSend1($_POST);
         }else{
             echo 'Nenhum tipo encontrado';
