@@ -1,5 +1,5 @@
 {
-    "name": "Nathan/form",
+    "name": "malukenho/form",
     "require": {
         "codegun/phpmailer-lite": "1.0.0"
     },
