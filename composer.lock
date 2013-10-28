@@ -12,7 +12,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/codegun/phpmailer-lite/zipball/1.0.0",
-                "reference": "1.0.0",
+                "reference": "1.2.0",
                 "shasum": ""
             },
             "require": {
