@@ -43,7 +43,7 @@ class MAIL
 
     	if ($nomeForm == 'form1') {
 
-    		$nn = '';
+    		$nn     = '';
     		$cargos = '';
 
     		foreach ($formulario['opcao'] as $value) {
