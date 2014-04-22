@@ -36,7 +36,7 @@ class MAIL
         ];
 
 
-    	$nomeForm = $formulario['tipo'];
+    	$nomeForm  = $formulario['tipo'];
     	$opcaoForm = (int) $formulario['opcao'];
 
     	$formulario['Arquivo'] = __DIR__ . '/arquivos_anexados/'.$_FILES['curriculum']['file_cmp'];
