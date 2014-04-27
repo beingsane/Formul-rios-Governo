@@ -61,10 +61,9 @@ class MAIL
     		$escolhas = $opcoes[$nomeForm];
     		$escolhas = $escolhas[$opcaoForm];
 
-		$titulo = 'Parabéns, sua inscrição foi concluida!';
+            $titulo = 'Parabéns, sua inscrição foi concluida!';
 
-    		$formulario['opcao'] = $escolhas;
-
+            $formulario['opcao'] = $escolhas;
     	}
 
     	$msg = '';
