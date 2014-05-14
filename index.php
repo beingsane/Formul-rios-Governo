@@ -12,7 +12,7 @@ define('USUARIO_EMAIL'  ,'xxxxx');
 define('SENHA_EMAIL'    ,'xxxx');
 
 require "classes/verificacao.php";
-require "/var/www/swapi/istos/global.includes/email/class.email.php";
+require "class.email.php";
 
 
 function carregarClasses($classe)
