@@ -4,7 +4,6 @@
  * User: Nathan
  * Date: 14/02/13
  * Time: 09:21
- * To change this template use File | Settings | File Templates.
  */
 class DB
 {
