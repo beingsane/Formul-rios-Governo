@@ -1,11 +1,4 @@
 <?php
-/**
- *
- * @author Jefersson Nathan
- * @date 14/02/13
- * @time 07:39
- * @package Formulário Governo
- */
 define('PATH_TEMPLATE','/var/www/swapi/istos/sites/ses/');
 define('SERVIDOR_EMAIL', 'abais.se.gov.br');
 define('USUARIO_EMAIL'  ,'xxxxx');
