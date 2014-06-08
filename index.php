@@ -4,7 +4,7 @@ define('SERVIDOR_EMAIL', 'abais.se.gov.br');
 define('USUARIO_EMAIL'  ,'xxxxx');
 define('SENHA_EMAIL'    ,'xxxx');
 
-require "classes/verificacao.php";
+require 'classes/verificacao.php';
 require "class.email.php";
 
 function carregarClasses($classe) {
