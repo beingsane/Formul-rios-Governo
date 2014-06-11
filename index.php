@@ -5,7 +5,7 @@ define('USUARIO_EMAIL'  ,'xxxxx');
 define('SENHA_EMAIL'    ,'xxxx');
 
 require 'classes/verificacao.php';
-require "class.email.php";
+require 'class.email.php';
 
 function carregarClasses($classe) {
     $classe = strtolower($classe);
