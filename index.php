@@ -15,7 +15,7 @@ function carregarClasses($classe) {
     }
 }
 
-spl_autoload_register("carregarClasses");
+spl_autoload_register('carregarClasses');
 
 $acao = isset($_GET['c']) ? $_GET['c'] : false;
 
