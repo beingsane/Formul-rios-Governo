@@ -7,7 +7,7 @@ define('SENHA_EMAIL'    ,'xxxx');
 require 'classes/verificacao.php';
 require 'class.email.php';
 
-function carregarClasses($classe) {
+function autoload($classe) {
     $classe = strtolower($classe);
 
     if (file_exists('classes/'.$classe.'.php')) {
@@ -15,7 +15,7 @@ function carregarClasses($classe) {
     }
 }
 
-spl_autoload_register('carregarClasses');
+spl_autoload_register('autoload');
 
 $acao = isset($_GET['c']) ? $_GET['c'] : false;
 
