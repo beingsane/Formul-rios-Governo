@@ -19,5 +19,5 @@ spl_autoload_register('autoload');
 
 $acao = isset($_GET['c']) ? $_GET['c'] : false;
 
-$verifica = new Verificacao;
-$verifica->verifica($acao);
+$verify = new Verificacao;
+$verify->verifica($acao);
