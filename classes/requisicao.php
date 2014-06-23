@@ -2,7 +2,8 @@
 
 class Requisicao
 {
-    public function __construct(){
+    public function __construct()
+    {
 
         if (count($_POST)) {
             header('Location: /form');
