@@ -32,9 +32,7 @@ class Requisicao
         }
 
 	    $validar = new Verificacao();
-        $msg = $validar->validacao($dados);
-
-    	$msg = utf8_encode($msg);
+        $msg     = utf8_encode($validar->validacao($dados));
 
         if (! $msg) {
             MAIL::sender("ALL", $dados, PATH_TEMPLATE . '/fmt_inscricao.htm');
