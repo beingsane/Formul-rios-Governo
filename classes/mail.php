@@ -87,10 +87,11 @@ class MAIL
         }
 
         if (is_string($params)) {
-            switch($params){
+            switch ($params) {
                 case 'ALL':
                     $email = self::$email;
                     break;
+
                 default:
                     $email = 'fulano@fulano.com';
                     break;
