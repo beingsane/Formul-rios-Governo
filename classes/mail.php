@@ -86,7 +86,7 @@ class MAIL
             $msg .=  "\t<tr>\n\t\t<td class=\"texto\" style=\"color:#484848\"><span class=\"style1\">".ucfirst($key)." : $value</span></td>\n\t</tr>\n";
         }
 
-        if(is_string($params)){
+        if (is_string($params)) {
             switch($params){
                 case 'ALL':
                     $email = self::$email;
