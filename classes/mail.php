@@ -15,7 +15,7 @@ class MAIL
             '5' => '1.5 Curso Técnico em Vigilância em Saúde'
         ];
 
-       $opcoes['form2'] = array(
+       $opcoes['form2'] = [
             '1' => '1.1 Curso Livre: Qualificação em Agente de Combate ás Endemias',
             '2' => '1.2 Curso Técnico em Prótese Dentária',
             '3' => '1.3 Curso de Prevenção da Morte Materna e Neonatal',
@@ -33,7 +33,7 @@ class MAIL
             '15' => '1.4 Gestão em Saúde Pública',
             '16' => '1.5 Sistemas de Informação em Saúde',
             '17' => '1.6 Obstetrícia (pré-natal e parto)'
-        );
+        ];
 
 
     	$nomeForm = $formulario['tipo'];
