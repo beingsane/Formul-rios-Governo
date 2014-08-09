@@ -7,13 +7,13 @@ class MAIL
     {
         $opcoes = [];
 
-        $opcoes['form1'] = array(
+        $opcoes['form1'] = [
             '1' => '1.1 Curso Livre: Qualificação em  Agente de Combate às Endemias',
             '2' => '1.2 Curso Técnico em Prótese Dentária',
             '3' => '1.3 Curso Técnico em Enfermagem',
             '4' => '1.4 Curso de Especialização Profissional de Nível Técnico em Enfermagem em Urgência e Emergência',
             '5' => '1.5 Curso Técnico em Vigilância em Saúde'
-        );
+        ];
 
        $opcoes['form2'] = array(
             '1' => '1.1 Curso Livre: Qualificação em Agente de Combate ás Endemias',
