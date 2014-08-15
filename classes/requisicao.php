@@ -1,11 +1,5 @@
 <?php
-/**
- *
- * @author Jefersson Nathan
- * @date 14/02/13
- * @time 07:39
- * @package Formul�rio Governo
- */
+
 class Requisicao
 {
     public function __construct(){
