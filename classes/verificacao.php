@@ -31,15 +31,15 @@ class Verificacao
 		}
 
 		if (!preg_match('#^\d{3}\.\d{3}\.\d{3}-\d{2}$#', $dados['cpf'])) {
-			$msg .= 'O número do CPF informado n�o � v�lido'.PHP_EOL;
+			$msg .= 'O número do CPF informado não � v�lido'.PHP_EOL;
 		}
 
 		if (!preg_match('#^\d{2}\s\d{4}-\d{4}$#', $dados['telefone'])) {
-			$msg .= 'O n�número do telefone n�o � v�lido - ex: xx xxxx-xxxx'.PHP_EOL;
+			$msg .= 'O número do telefone não � v�lido - ex: xx xxxx-xxxx'.PHP_EOL;
 		}
 
 		if (!preg_match('#^[A-Za-z0-9._-]+@[A-Za-z]+\.[A-Za-z.]+$#', $dados['e-mail'])) {
-			$msg .= 'O email n�o � v�lido'.PHP_EOL;
+			$msg .= 'O email não � v�lido'.PHP_EOL;
 		}
 
 		if (empty($dados['endereco'])) {
