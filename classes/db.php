@@ -6,7 +6,7 @@ class DB
     private function __construct(){}
     private function __clone(){}
 
-    public static function conexao()
+    public static function getConnection()
     {
         if(self::$conexao){
             self::$conexao =  new PDO('mysql:host=;dbname=','','');
@@ -17,7 +17,7 @@ class DB
 
     public static function inserir(array $dados)
     {
-        $db = self::conexao();
+        $db = self::getConnection();
 
     	try{
 
