@@ -29,8 +29,8 @@ class Requisicao
         }
 
         if (! array_key_exists('tipo',$dados)) {
-            echo 'Erro no sistema, por favor contacte o administrador do'.
-			'sistema, ou tente novamente!';
+            echo 'Erro no sistema, por favor contacte o administrador do'
+		 . 'sistema, ou tente novamente!';
         	exit;
         }
 
@@ -62,10 +62,6 @@ class Requisicao
 
     	}
 
-
         require "html/Rodape.html";
-
     }
-
-
 }
