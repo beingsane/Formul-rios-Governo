@@ -178,15 +178,11 @@
 
     </div>
 
-    <?php
-            if (isset($msg)){
-     ?>
+    <?php if (isset($msg)) : ?>
         <div id="errorMessage" class="mgbot2">
             <?php echo nl2br($msg); ?>
         </div>
-    <?php
-            }
-        ?>
+    <?php endif; ?>
 
 
 
