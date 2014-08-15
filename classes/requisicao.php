@@ -10,7 +10,7 @@ class Requisicao
 
         if (isset($_POST['tipo']) 
         	  and ($_POST['tipo'] == 'form1' 
-        	   || $_POST['tipo'] == 'form2') 
+        	   or $_POST['tipo'] == 'form2') 
         ) {
             $this->formSend1($_POST);
         }else{
