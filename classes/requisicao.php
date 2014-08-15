@@ -40,7 +40,7 @@ class Requisicao
 
     	$msg = utf8_encode($msg);
 
-        if(! $msg) {
+        if (! $msg) {
             MAIL::sender("ALL", $dados, PATH_TEMPLATE . '/fmt_inscricao.htm');
 
         	require "html/Topo_conclusao.html";
@@ -50,8 +50,9 @@ class Requisicao
         }
 
 
-        if (empty($msg))
+        if (empty($msg)) {
             unset($msg);
+        }
 
 
     	if ($dados['tipo'] == 'form1' ) {
