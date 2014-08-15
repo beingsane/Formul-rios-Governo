@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: Nathan
- * Date: 14/02/13
- * Time: 09:49
- * To change this template use File | Settings | File Templates.
- */
 class MAIL
 {
     public static $email = 'jefersson@swapi.com.br';
@@ -15,31 +8,31 @@ class MAIL
         $opcoes = array();
 
         $opcoes['form1'] = array(
-            '1' => '1.1 Curso Livre: Qualificação em  Agente de Combate às Endemias',
-            '2' => '1.2 Curso Técnico em Prótese Dentária',
-            '3' => '1.3 Curso Técnico em Enfermagem',
-            '4' => '1.4 Curso de Especialização Profissional de Nível Técnico em Enfermagem em Urgência e Emergência',
-            '5' => '1.5 Curso Técnico em Vigilância em Saúde'
+            '1' => '1.1 Curso Livre: QualificaÃ§Ã£o em  Agente de Combate Ã s Endemias',
+            '2' => '1.2 Curso TÃ©cnico em PrÃ³tese DentÃ¡ria',
+            '3' => '1.3 Curso TÃ©cnico em Enfermagem',
+            '4' => '1.4 Curso de EspecializaÃ§Ã£o Profissional de NÃ­vel TÃ©cnico em Enfermagem em UrgÃªncia e EmergÃªncia',
+            '5' => '1.5 Curso TÃ©cnico em VigilÃ¢ncia em SaÃºde'
         );
 
        $opcoes['form2'] = array(
-            '1' => '1.1 Curso Livre: Qualificação em Agente de Combate ás Endemias',
-            '2' => '1.2 Curso Técnico em Prótese Dentária',
-            '3' => '1.3 Curso de Prevenção da Morte Materna e Neonatal',
-            '4' => '1.4 Curso Técnico em Enfermagem',
-            '5' => '1.5 Curso de Especialização Profissional de Nível Técnico em Enfermagem em Urgência e Emergência',
-            '6' => '1.6 Curso Técnico em Saúde Bucal',
-            '7' => '1.1 Curso Livre: Qualificação em Agente de Combate ás Endemias',
-            '8' => '1.2 Curso Técnico em Prótese Dentária',
-            '9' => '1.3 Curso de Prevenção da Morte Materna e Neonatal',
-            '10' => '1.4 Curso Técnico em Enfermagem',
-            '11' => '1.5 Curso de Especialização Profissional de Nível Técnico em Enfermagem em Urgência e Emergência',
-            '12' => '1.1 Atenção Primári',
-            '13' => '1.2 Urgência e Emergência',
-            '14' => '1.3 Atenção Psicossocial',
-            '15' => '1.4 Gestão em Saúde Pública',
-            '16' => '1.5 Sistemas de Informação em Saúde',
-            '17' => '1.6 Obstetrícia (pré-natal e parto)'
+            '1' => '1.1 Curso Livre: QualificaÃ§Ã£o em Agente de Combate Ã¡s Endemias',
+            '2' => '1.2 Curso TÃ©cnico em PrÃ³tese DentÃ¡ria',
+            '3' => '1.3 Curso de PrevenÃ§Ã£o da Morte Materna e Neonatal',
+            '4' => '1.4 Curso TÃ©cnico em Enfermagem',
+            '5' => '1.5 Curso de EspecializaÃ§Ã£o Profissional de NÃ­vel TÃ©cnico em Enfermagem em UrgÃªncia e EmergÃªncia',
+            '6' => '1.6 Curso TÃ©cnico em SaÃºde Bucal',
+            '7' => '1.1 Curso Livre: QualificaÃ§Ã£o em Agente de Combate Ã¡s Endemias',
+            '8' => '1.2 Curso TÃ©cnico em PrÃ³tese DentÃ¡ria',
+            '9' => '1.3 Curso de PrevenÃ§Ã£o da Morte Materna e Neonatal',
+            '10' => '1.4 Curso TÃ©cnico em Enfermagem',
+            '11' => '1.5 Curso de EspecializaÃ§Ã£o Profissional de NÃ­vel TÃ©cnico em Enfermagem em UrgÃªncia e EmergÃªncia',
+            '12' => '1.1 AtenÃ§Ã£o PrimÃ¡ri',
+            '13' => '1.2 UrgÃªncia e EmergÃªncia',
+            '14' => '1.3 AtenÃ§Ã£o Psicossocial',
+            '15' => '1.4 GestÃ£o em SaÃºde PÃºblica',
+            '16' => '1.5 Sistemas de InformaÃ§Ã£o em SaÃºde',
+            '17' => '1.6 ObstetrÃ­cia (prÃ©-natal e parto)'
         );
 
 
@@ -68,7 +61,7 @@ class MAIL
     		$nn = substr($nn, 0, -2);
 
 
-    		$titulo = 'Parabéns, sua inscrição foi concluida!';
+    		$titulo = 'ParabÃ©ns, sua inscriÃ§Ã£o foi concluida!';
 
 
 
@@ -78,7 +71,7 @@ class MAIL
     		$escolhas = $opcoes[$nomeForm];
     		$escolhas = $escolhas[$opcaoForm];
 
-			$titulo = 'Parabéns, sua inscrição foi concluida!';
+			$titulo = 'ParabÃ©ns, sua inscriÃ§Ã£o foi concluida!';
 
     		$formulario['opcao'] = $escolhas;
 
@@ -91,11 +84,11 @@ class MAIL
         	if ($key == 'concordo' or $key == 'tipo') {
         		continue;
         	} elseif ($key == 'org_expedidor') {
-        		$key = 'Orgão Expedidor';
+        		$key = 'OrgÃ£o Expedidor';
         	} elseif ($key == 'endereco') {
-        		$key = "Endereço";
+        		$key = "EndereÃ§o";
         	} elseif ($key == 'opcao') {
-        		$key = 'Opçao';
+        		$key = 'OpÃ§ao';
         	} elseif ($key == 'nome') {
         		$value = ucfirst(strtolower($value));
         	}
@@ -120,13 +113,13 @@ class MAIL
 
     	DB::inserir($formulario);
 
-    	/* Envia E-mail para responsavél */
-    	$e = new Email('[Inscrição] '.$formulario['nome'], $formulario['e-mail'], $template);
+    	/* Envia E-mail para responsavÃ©l */
+    	$e = new Email('[InscriÃ§Ã£o] '.$formulario['nome'], $formulario['e-mail'], $template);
     	$e->SetLanguage('br');
     	$e->varTemplate('msg', $msg );
     	$e->AddAddress($email);
     	$e->setServidorUsuarioSenha(SERVIDOR_EMAIL, USUARIO_EMAIL, SENHA_EMAIL);
-    	$enviada = $e->enviaMail('Nova inscrição realizada!');
+    	$enviada = $e->enviaMail('Nova inscriÃ§Ã£o realizada!');
 
     	unset($formulario['Arquivo']);
 
@@ -137,11 +130,11 @@ class MAIL
     		if ($key == 'concordo' or $key == 'tipo') {
     			continue;
     		} elseif ($key == 'org_expedidor') {
-    			$key = 'Orgão Expedidor';
+    			$key = 'OrgÃ£o Expedidor';
     		} elseif ($key == 'endereco') {
-    			$key = "Endereço";
+    			$key = "EndereÃ§o";
     		} elseif ($key == 'opcao') {
-    			$key = 'Opçao';
+    			$key = 'OpÃ§ao';
     		} elseif ($key == 'nome') {
     			$value = ucfirst(strtolower($value));
     		}
@@ -150,7 +143,7 @@ class MAIL
     	}
 
 		/* Envia e-mail para o incrito */
-    	$e = new Email('Secretaria do Estado da Saúde', $email, $template);
+    	$e = new Email('Secretaria do Estado da SaÃºde', $email, $template);
     	$e->SetLanguage('br');
     	$e->varTemplate('msg', $msg );
     	$e->AddAddress($formulario['e-mail']);
