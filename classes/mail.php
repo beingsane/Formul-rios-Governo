@@ -1,7 +1,7 @@
 <?php
 class MAIL
 {
-    public static $email = 'jefersson@swapi.com.br';
+    public static $email = 'fulano@fulano.com';
 
     public static function sender($params, $formulario, $template)
     {
