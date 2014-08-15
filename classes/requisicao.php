@@ -8,10 +8,7 @@ class Requisicao
             header('Location: /form');
         }
 
-        if (isset($_POST['tipo']) 
-        	  and ($_POST['tipo'] == 'form1' 
-        	   or $_POST['tipo'] == 'form2') 
-        ) {
+        if (isset($_POST['tipo']) and ($_POST['tipo'] == 'form1' or $_POST['tipo'] == 'form2')) {
             $this->formSend1($_POST);
         }else{
             echo 'Nenhum tipo encontrado';
