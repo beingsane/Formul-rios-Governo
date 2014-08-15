@@ -4,8 +4,9 @@ class Requisicao
 {
     public function __construct(){
 
-        if(count($_POST))
+        if (count($_POST)) {
             header('Location: /form');
+        }
 
         if (isset($_POST['tipo']) 
         	  and ($_POST['tipo'] == 'form1' 
