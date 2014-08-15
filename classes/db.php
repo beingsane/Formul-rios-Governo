@@ -8,7 +8,7 @@ class DB
 
     public static function getConnection()
     {
-        if(self::$conexao){
+        if(self::$conexao) {
             self::$conexao =  new PDO('mysql:host=;dbname=','','');
         }
         
@@ -17,7 +17,7 @@ class DB
 
     public static function inserir(array $dados)
     {
-        $db = self::getConnection();
+        $db = static::getConnection();
 
     	try{
 
