@@ -31,27 +31,27 @@ class Verificacao
 		}
 
 		if (!preg_match('#^\d{3}\.\d{3}\.\d{3}-\d{2}$#', $dados['cpf'])) {
-			$msg .= 'O número do CPF informado não é v�lido'.PHP_EOL;
+			$msg .= 'O número do CPF informado não é válido'.PHP_EOL;
 		}
 
 		if (!preg_match('#^\d{2}\s\d{4}-\d{4}$#', $dados['telefone'])) {
-			$msg .= 'O número do telefone não é v�lido - ex: xx xxxx-xxxx'.PHP_EOL;
+			$msg .= 'O número do telefone não é válido - ex: xx xxxx-xxxx'.PHP_EOL;
 		}
 
 		if (!preg_match('#^[A-Za-z0-9._-]+@[A-Za-z]+\.[A-Za-z.]+$#', $dados['e-mail'])) {
-			$msg .= 'O email não � v�lido'.PHP_EOL;
+			$msg .= 'O email não é válido'.PHP_EOL;
 		}
 
 		if (empty($dados['endereco'])) {
-			$msg .= 'O campo endere�o não foi preenchido!'.PHP_EOL;
+			$msg .= 'O campo endereço não foi preenchido!'.PHP_EOL;
 
 			if (strlen($dados['endereco']) < 10) {
-				$msg .= 'Informe melhor o seu endere�o'.PHP_EOL;
+				$msg .= 'Informe melhor o seu endereço'.PHP_EOL;
 			}
 		}
 
 		if ($_FILES['curriculum']['error'] != 0) {
-			$msg .= 'Verifique o arquivo que est� sendo enviado!'.PHP_EOL;
+			$msg .= 'Verifique o arquivo que está sendo enviado!'.PHP_EOL;
 		} else {
 
 
@@ -67,7 +67,7 @@ class Verificacao
 			if (is_uploaded_file($_FILES['curriculum']['tmp_name']))
 				move_uploaded_file($_FILES['curriculum']['tmp_name'], '/var/www/swapi/istos/sites/ses/form/arquivos_anexados/'.$file_name);
 			else
-				$msg .= 'Verifique o arquivo que est� sendo enviado!'.PHP_EOL;
+				$msg .= 'Verifique o arquivo que está sendo enviado!'.PHP_EOL;
 
 		}
 
@@ -78,7 +78,7 @@ class Verificacao
 				$quantidade = count($dados['opcao']);
 
 				if (! ($quantidade <= 2)) {
-					$msg .= "Voc� deve escolher entre 1 e 2 op��es".PHP_EOL;
+					$msg .= "Você deve escolher entre 1 e 2 opções".PHP_EOL;
 				}
 
 			} else {
