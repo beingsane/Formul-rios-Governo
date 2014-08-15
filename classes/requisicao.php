@@ -30,13 +30,11 @@ class Requisicao
         }
 
         if (! array_key_exists('tipo',$dados)) {
-            echo 'Erro no sistema, por favor contacte o administrador do'
-		 . 'sistema, ou tente novamente!';
-        	exit;
+            exit('Erro no sistema, por favor contacte o administrador do sistema, ou tente novamente!');
         }
 
-	   $validar = new Verificacao();
-       $msg = $validar->validacao($dados);
+	    $validar = new Verificacao();
+        $msg = $validar->validacao($dados);
 
     	$msg = utf8_encode($msg);
 
