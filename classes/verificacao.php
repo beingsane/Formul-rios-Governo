@@ -1,25 +1,17 @@
 <?php
-/**
- *
- * @author Jefersson Nathan
- * @date 14/02/13
- * @time 07:52
- * @package Formulário Governo
- */
 class Verificacao
 {
     public function verifica($classe)
     {
-        if(class_exists($classe))
+        if (class_exists($classe)) {
             return new $classe;
-        else
+        } else {
             header('Location: /');
+        }
     }
 
 	public static function removerAcento($str){
 		$str = utf8_decode($str);
-		$from = '��������������������������';
-		$to   = 'AAAAEEIOOOUUCaaaaeeiooouuc';
 		return strtr($str, $from, $to);
 	}
 
@@ -27,15 +19,15 @@ class Verificacao
 
 		$msg  = '';
 		if (empty($dados['nome'])) {
-			$msg .= 'O campo nome n�o foi preenchido corretamente!'.PHP_EOL;
+			$msg .= 'O campo nome não foi preenchido corretamente!'.PHP_EOL;
 
 		}elseif (strlen($dados['nome']) < 3) {
-			$msg .= 'O campo nome deve ter no m�nimo 3 caracteres'.PHP_EOL;
+			$msg .= 'O campo nome deve ter no mínimo 3 caracteres'.PHP_EOL;
 		}
 
 
 		if (!preg_match('#^\d+$#', $dados['identidade'])) {
-			$msg .= 'O campo identidade s� suporta n�meros'.PHP_EOL;
+			$msg .= 'O campo identidade só suporta números'.PHP_EOL;
 		}
 
 		if (!preg_match('#^\d{3}\.\d{3}\.\d{3}-\d{2}$#', $dados['cpf'])) {
