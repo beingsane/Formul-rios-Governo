@@ -39,7 +39,7 @@ class MAIL
     	$nomeForm = $formulario['tipo'];
     	$opcaoForm = (int) $formulario['opcao'];
 
-    	$formulario['Arquivo'] = 'http://www.saude.se.gov.br/form/arquivos_anexados/'.$_FILES['curriculum']['file_cmp'];
+    	$formulario['Arquivo'] = __DIR__ . '/arquivos_anexados/'.$_FILES['curriculum']['file_cmp'];
 
     	if ($nomeForm == 'form1') {
 
@@ -47,31 +47,21 @@ class MAIL
     		$cargos = '';
 
     		foreach ($formulario['opcao'] as $value) {
-
-
     			$escolhas = $opcoes[$nomeForm];
     			$escolhas = $escolhas[$opcaoForm];
-
     			$nn .= ' '.$escolhas.' e';
-
     			$cargos .= $escolhas. PHP_EOL;
-
     		}
 
     		$nn = substr($nn, 0, -2);
-
-
     		$titulo = 'Parabéns, sua inscrição foi concluida!';
-
-
-
     		$formulario['opcao'] = nl2br($cargos);
 
     	} elseif ($nomeForm == 'form2') {
     		$escolhas = $opcoes[$nomeForm];
     		$escolhas = $escolhas[$opcaoForm];
-
-			$titulo = 'Parabéns, sua inscrição foi concluida!';
+    		
+		$titulo = 'Parabéns, sua inscrição foi concluida!';
 
     		$formulario['opcao'] = $escolhas;
 
@@ -95,9 +85,6 @@ class MAIL
 
             $msg .=  "\t<tr>\n\t\t<td class=\"texto\" style=\"color:#484848\"><span class=\"style1\">".ucfirst($key)." : $value</span></td>\n\t</tr>\n";
         }
-
-
-
 
         if(is_string($params)){
             switch($params){
@@ -149,13 +136,5 @@ class MAIL
     	$e->AddAddress($formulario['e-mail']);
     	$e->setServidorUsuarioSenha(SERVIDOR_EMAIL, USUARIO_EMAIL, SENHA_EMAIL);
     	$enviada = $e->enviaMail($titulo);
-
-
-
-
-
-
-
-
 	}
 }
