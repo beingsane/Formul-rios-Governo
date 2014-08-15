@@ -92,7 +92,7 @@ class MAIL
                     $email = self::$email;
                     break;
                 default:
-                    $email = 'jefersson@swapi.com.br';
+                    $email = 'fulano@fulano.com';
                     break;
             }
         }
