@@ -23,12 +23,11 @@ class DB
     	try{
 
     	    $dados = utf8_encode(serialize($dados));
-    	    $dados = addslashes($dados);
 
     	    $query = sprintf(
     	        'INSERT INTO `%s`(dados) VALUES("%s")',
     	        'swp_incricoes2013',
-    	        $dados
+    	        addslashes($dados)
     	    );
 
     	    $db->exec($query);
