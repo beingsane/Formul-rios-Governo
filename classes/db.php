@@ -20,20 +20,20 @@ class DB
     {
         $db = static::getConnection();
 
-    	try{
+        try{
 
-    	    $dados = utf8_encode(serialize($dados));
+            $dados = utf8_encode(serialize($dados));
 
-    	    $query = sprintf(
-    	        'INSERT INTO `%s`(dados) VALUES("%s")',
-    	        'swp_incricoes2013',
-    	        addslashes($dados)
-    	    );
+            $query = sprintf(
+                'INSERT INTO `%s`(dados) VALUES("%s")',
+                'swp_incricoes2013',
+                addslashes($dados)
+            );
 
-    	    $db->exec($query);
+            $db->exec($query);
 
-    	} catch(PDOException $e) {
-    		exit($e->getMessage());
-    	}
+        } catch(PDOException $e) {
+            exit($e->getMessage());
+        }
     }
 }
