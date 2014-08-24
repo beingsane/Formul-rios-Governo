@@ -9,7 +9,7 @@ class DB
 
     public static function getConnection()
     {
-        if(self::$conexao) {
+        if (self::$conexao) {
             self::$conexao =  new PDO('mysql:host=;dbname=','','');
         }
 
