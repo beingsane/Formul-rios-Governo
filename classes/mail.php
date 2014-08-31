@@ -5,7 +5,7 @@ class MAIL
 
     public static function sender($params, $formulario, $template)
     {
-        $opcoes = array();
+        $opcoes = [];
 
         $opcoes['form1'] = array(
             '1' => '1.1 Curso Livre: Qualificação em  Agente de Combate às Endemias',
@@ -60,7 +60,7 @@ class MAIL
     	} elseif ($nomeForm == 'form2') {
     		$escolhas = $opcoes[$nomeForm];
     		$escolhas = $escolhas[$opcaoForm];
-    		
+
 		$titulo = 'Parabéns, sua inscrição foi concluida!';
 
     		$formulario['opcao'] = $escolhas;
