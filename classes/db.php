@@ -33,7 +33,7 @@ class DB
     	    $db->exec($query);
 
     	} catch(PDOException $e) {
-    		echo $e->getMessage();
+    		exit($e->getMessage());
     	}
     }
 }
