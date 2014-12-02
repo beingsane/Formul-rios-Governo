@@ -2,7 +2,7 @@
 class DB
 {
     static $conexao = null;
-    
+
     private function __construct(){}
     private function __clone(){}
 
@@ -11,7 +11,7 @@ class DB
         if(self::$conexao) {
             self::$conexao =  new PDO('mysql:host=;dbname=','','');
         }
-        
+
         return self::$conexao;
     }
 
@@ -29,12 +29,11 @@ class DB
     	        'swp_incricoes2013',
     	        $dados
     	    );
-    	    
+
     	    $db->exec($query);
 
     	} catch(PDOException $e) {
     		echo $e->getMessage();
     	}
     }
-
 }
